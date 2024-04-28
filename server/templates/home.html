@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <style>
+      /* Add your CSS styles here */
+      .navbar {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .navbar li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .navbar li a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        /* Add your container styles here */
+      }\
+      
+      .center {
+        width: 50%; /* Adjust as needed */
+        margin: 0 auto; /* This centers the element horizontally */
+        text-align: center; /* This centers the text inside the element */
+    }
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="{% url 'connected_dev' %}">Connected devices</a></li>
+      </ul>
+    </nav>
+    <br>
+    <br>
+    <div class="center">
+      <h1>Welcome to 451 Geeks </h1>
+      <p>see connected devices?</p>
+  </div>
+ 
+    <div class="container">
+      <!-- Add your home page content here -->
+    </div>
+  </body>
+</html>
