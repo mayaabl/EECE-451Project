@@ -1,3 +1,6 @@
+!!!!!!IMPOTANT NOTE!!!!!!!!
+not all files for flutter (app) are uploaded, because they are large and can't be aploaded (this is flutter problem), so you might create new flutter app, and take just lib, android, pubspec.yaml
+
 # EECE-451Project
 Project Requirements:
 (versions as of April 2024)
