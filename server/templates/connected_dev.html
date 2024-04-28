@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Connected Devices</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      h1,
+      h2 {
+        color: #333;
+      }
+      table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+      }
+      th,
+      td {
+        border: 1px solid #dddddd;
+        padding: 8px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .navbar {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .navbar li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .navbar li a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        /* Add your container styles here */
+      }
+      
+      .center {
+        width: 50%; /* Adjust as needed */
+        margin: 0 auto; /* This centers the element horizontally */
+        text-align: center; /* This centers the text inside the element */
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="{% url 'homefunc' %}">Home</a></li>
+        <li><a href="{% url 'connected_dev' %}">Connected devices</a></li>
+      </ul>
+    </nav>
+    <h1>Welcome to Server</h1>
+    <h2>Number of Total Devices: {{ connected_devices_count }}</h2>
+    <h3>All Present and Past Connections</h3>
+    <table>
+      <tr>
+        <th>MAC Address</th>
+        <th>IP Address</th>
+        <th>Date & Time</th>
+      </tr>
+      {% for device in connected_devices %}
+      <tr>
+        <td>{{ device.mac }}</td>
+        <td>{{ device.ip }}</td>
+        <td>{{ device.date_and_time }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
